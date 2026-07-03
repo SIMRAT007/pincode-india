@@ -1,0 +1,105 @@
+{
+  "name": "pincode-india",
+  "version": "2.0.0",
+  "description": "Offline Indian pincode lookup with native current-location & reverse-geocoding support (Android + iOS). 19,500+ pincodes, zero paid APIs.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "data",
+    "android",
+    "ios",
+    "pincode-india.podspec",
+    "src/NativePincodeIndia.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "codegenConfig": {
+    "name": "PincodeIndiaSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.pincodeindia"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
+    "prepublishOnly": "npm run build && npm test",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "india",
+    "pincode",
+    "pin-code",
+    "postal-code",
+    "indian-pincode",
+    "indian-postal-code",
+    "pincode-lookup",
+    "offline",
+    "city",
+    "district",
+    "state",
+    "geocode",
+    "reverse-geocoding",
+    "current-location",
+    "gps",
+    "delivery",
+    "ecommerce",
+    "checkout",
+    "react-native",
+    "turbomodule",
+    "node",
+    "typescript"
+  ],
+  "author": {
+    "name": "technoxys",
+    "url": "https://github.com/technoxys"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technoxys/pincode-india.git"
+  },
+  "bugs": {
+    "url": "https://github.com/technoxys/pincode-india/issues"
+  },
+  "homepage": "https://github.com/technoxys/pincode-india#readme",
+  "peerDependencies": {
+    "react-native": ">=0.71.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.0",
+    "@types/react-native": "^0.73.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react-native": "^0.74.0",
+    "ts-jest": "^29.1.5",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

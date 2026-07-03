@@ -1,0 +1,31 @@
+<!--
+  Example Info.plist entries required by pincode-india's location APIs.
+
+  Copy these keys into your app's own Info.plist (Xcode: Info tab, or
+  directly editing ios/<YourApp>/Info.plist). iOS will refuse to show the
+  permission prompt — and getCurrentLocation()/requestLocationPermission()
+  will silently fail — if these descriptions are missing.
+
+  Customize the strings to describe your app's actual use case; App Store
+  review checks that these are accurate and specific, not generic.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- Required: shown when requesting "when in use" authorization. -->
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>We use your location to detect your pincode automatically and show accurate delivery estimates at checkout.</string>
+
+  <!--
+    Optional: only required if your app also requests "always" authorization
+    (background location). pincode-india's APIs only request "when in use"
+    by default — include this key only if your own app code separately
+    requests background authorization.
+  -->
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>We use your location to detect your pincode automatically, including when the app is in the background, to keep delivery estimates up to date.</string>
+
+</dict>
+</plist>

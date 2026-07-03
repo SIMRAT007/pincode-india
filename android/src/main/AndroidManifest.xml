@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  pincode-india native module manifest.
+
+  Declares the runtime location permissions required by
+  getCurrentLocation() / getCurrentPincode() / watchLocation().
+  ACCESS_FINE_LOCATION enables GPS-grade accuracy; ACCESS_COARSE_LOCATION
+  is requested as a fallback for devices/users that only grant
+  network-based location. Neither is auto-granted — the host app's user
+  must approve the runtime prompt triggered by requestLocationPermission().
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pincodeindia">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+      Not required for the FusedLocationProviderClient API itself, but
+      some OEM builds gate background watch updates behind it. Host apps
+      that need background location updates should additionally declare
+      ACCESS_BACKGROUND_LOCATION in their own app-level manifest along
+      with the corresponding Play Store policy disclosures.
+    -->
+
+</manifest>

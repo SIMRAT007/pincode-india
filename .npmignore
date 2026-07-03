@@ -1,0 +1,9 @@
+src/
+tests/
+coverage/
+.github/
+*.tgz
+tsconfig.json
+jest.config.js
+.eslintrc*
+*.map

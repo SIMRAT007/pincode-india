@@ -1,0 +1,71 @@
+// pincode-india Android native module build configuration.
+//
+// Provides current-location and reverse-geocoding support via
+// Google Play Services FusedLocationProviderClient and the stock
+// android.location.Geocoder — no third-party location libraries,
+// no paid mapping APIs.
+
+buildscript {
+    ext.safeExtGet = { prop, fallback ->
+        rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:${safeExtGet('agpVersion', '8.1.1')}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${safeExtGet('kotlinVersion', '1.9.24')}"
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+    namespace 'com.pincodeindia'
+    compileSdkVersion safeExtGet('compileSdkVersion', 34)
+
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 23)
+        targetSdkVersion safeExtGet('targetSdkVersion', 34)
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    lintOptions {
+        disable 'GradleCompatible'
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    // React Native core — provided by the host app at the version it ships.
+    implementation "com.facebook.react:react-android"
+
+    // FusedLocationProviderClient — Google Play Services location.
+    implementation "com.google.android.gms:play-services-location:21.3.0"
+
+    // Kotlin coroutines, used to bridge Play Services Tasks to suspend functions.
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${safeExtGet('kotlinVersion', '1.9.24')}"
+}
