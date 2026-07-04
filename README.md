@@ -579,3 +579,11 @@ MIT License
 Made with ❤️ for the Indian developer community.
 
 If you find this package useful, please consider giving it a ⭐ on GitHub.
+
+---
+
+ #### Contact Developer (for any issue or updation request)
+
+- [Portfolio Link](https://simratsingh.vercel.app/) 
+
+- [Send Email](mailto:simratsinghmehra01@gmail.com)

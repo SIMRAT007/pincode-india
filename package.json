@@ -1,6 +1,6 @@
 {
-  "name": "pincode-india",
-  "version": "2.0.0",
+  "name": "@technoxys/pincode-india",
+  "version": "1.0.0",
   "description": "Offline Indian pincode lookup with native current-location & reverse-geocoding support (Android + iOS). 19,500+ pincodes, zero paid APIs.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -71,7 +71,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/technoxys/pincode-india.git"
+    "url": "git+https://github.com/technoxys/pincode-india.git"
   },
   "bugs": {
     "url": "https://github.com/technoxys/pincode-india/issues"
