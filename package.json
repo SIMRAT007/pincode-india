@@ -1,6 +1,6 @@
 {
   "name": "@technoxys/pincode-india",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Offline Indian pincode lookup with native current-location & reverse-geocoding support (Android + iOS). 19,500+ pincodes, zero paid APIs.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
