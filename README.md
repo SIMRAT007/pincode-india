@@ -2,9 +2,10 @@
 
 > **Fast, offline Indian Pincode & Current Location library for Node.js, React, React Native, Next.js and modern browsers.**
 
-![npm](https://img.shields.io/npm/v/pincode-india)
-![downloads](https://img.shields.io/npm/dm/pincode-india)
-![license](https://img.shields.io/npm/l/pincode-india)
+[![npm](https://img.shields.io/npm/v/%40technoxys%2Fpincode-india)](https://www.npmjs.com/package/@technoxys/pincode-india)
+[![Downloads](https://img.shields.io/npm/dm/%40technoxys%2Fpincode-india)](https://www.npmjs.com/package/@technoxys/pincode-india)
+[![License](https://img.shields.io/npm/l/%40technoxys%2Fpincode-india)](https://github.com/technoxys/pincode-india/blob/main/LICENSE)
+[![NPM](https://img.shields.io/badge/npm-package-red)](https://www.npmjs.com/package/@technoxys/pincode-india)
 ![typescript](https://img.shields.io/badge/TypeScript-Supported-blue)
 ![react-native](https://img.shields.io/badge/React%20Native-Supported-success)
 ![platform](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Node-success)
